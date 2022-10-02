@@ -18,4 +18,4 @@ Since classification only based on BIO labels does not provide *sufficient* resu
 * What we got: Vocabulary of tokens, BIO label encoding, POS-tags label encoding
 
 Following results can be shown as an example:
-
+![Figure 1: Samples from Vocabulary and Label Encodings](https://github.com/NamazovMN/BIO-classifier/blob/master/Screenshot%20from%202022-10-02%2014-07-49.png)
