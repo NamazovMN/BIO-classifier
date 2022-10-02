@@ -19,3 +19,18 @@ Since classification only based on BIO labels does not provide *sufficient* resu
 
 Following results can be shown as an example:
 ![Figure 1: Samples from Vocabulary and Label Encodings](https://github.com/NamazovMN/BIO-classifier/blob/master/Screenshot%20from%202022-10-02%2014-07-49.png)
+
+## Idea of Solution and Approach
+Bi-LSTM model was used as a classification model, since it analyzes sequences in both directions (left to right, right to left). However, it was obvious after running model only with BIO labels, model hardly beat the baseline result (F1(0.54)). Thus, I decided to use POS tags as another branch of the model. That is why it is called parallel model. Model was pushed to concentrate not only BIO labels, but also POS tags of the tokens that this extra information lead us to obtain sufficient results.
+
+More details: Two channels are used to feed the model. It can be seen from the following figure easily
+Note: Figure is prepared, yet!
+
+## Results and Comparison:
+As a result we trained model with 2 different learning rates, which  are 1e-4 and 1e-5. While F1 score (macro) 0.75 was obtained with first approach, F1(0.73) was obtained by second approach. 
+Loss and Accuracy graphs will be evaluated and added soon.
+
+P.S. Dataset is not published because of privacy reasons However relevant academic paper link will be published soon, too.
+
+*Thanks for your attention!
+*Author: Mahammad Namazov
